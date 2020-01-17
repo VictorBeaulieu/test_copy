@@ -1,0 +1,11 @@
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\bin\Debug\test_copy_file.exe.config
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\bin\Debug\test_copy_file.exe
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\bin\Debug\test_copy_file.pdb
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\obj\Debug\test_copy_file.csprojAssemblyReference.cache
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\obj\Debug\test_copy_file.Properties.Resources.resources
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\obj\Debug\test_copy_file.csproj.GenerateResource.cache
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\obj\Debug\test_copy_file.csproj.CoreCompileInputs.cache
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\obj\Debug\test_copy_file.exe
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\obj\Debug\test_copy_file.pdb
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\obj\Debug\test_copy_file.Form_change_track.resources
+C:\Users\VictorBeaulieu\source\repos\test_copy_file\test_copy_file\obj\Debug\test_copy_file.DeviceSelection.resources
