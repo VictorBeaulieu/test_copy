@@ -17,11 +17,34 @@ namespace test_copy_file
         string[] array_fileName_copy = new string[8];
         string[] array_safeFileName_copy = new string[8];
         string copy_location;
-        
+        List<Button> list_btn_long;
+        List<Button> list_btn_short;
 
         public Form_change_track()
         {
             InitializeComponent();
+            list_btn_short = new List<Button>();
+            list_btn_long = new List<Button>();
+
+            list_btn_long.Add(btn_track_long_1);
+            list_btn_long.Add(btn_track_long_2);
+            list_btn_long.Add(btn_track_long_3);
+            list_btn_long.Add(btn_track_long_4);
+            list_btn_long.Add(btn_track_long_5);
+            list_btn_long.Add(btn_track_long_6);
+            list_btn_long.Add(btn_track_long_7);
+            list_btn_long.Add(btn_track_long_8);
+
+            list_btn_short.Add(btn_track_1);
+            list_btn_short.Add(btn_track_2);
+            list_btn_short.Add(btn_track_3);
+            list_btn_short.Add(btn_track_4);
+            list_btn_short.Add(btn_track_5);
+            list_btn_short.Add(btn_track_6);
+            list_btn_short.Add(btn_track_7);
+            list_btn_short.Add(btn_track_8);
+
+
             Console.WriteLine(Program.path_device);
             Console.WriteLine(Program.config[1]);
             comboBox1.SelectedIndex = Int16.Parse(Program.config[1])-1;
@@ -37,100 +60,9 @@ namespace test_copy_file
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0:
-                    btn_track_1.Visible = true;
-                    btn_track_2.Visible = false;
-                    btn_track_3.Visible = false;
-                    btn_track_4.Visible = false;
-                    btn_track_5.Visible = false;
-                    btn_track_6.Visible = false;
-                    btn_track_7.Visible = false;
-                    btn_track_8.Visible = false;
-                    break;
-                case 1:
-                    btn_track_1.Visible = true;
-                    btn_track_2.Visible = true;
-                    btn_track_3.Visible = false;
-                    btn_track_4.Visible = false;
-                    btn_track_5.Visible = false;
-                    btn_track_6.Visible = false;
-                    btn_track_7.Visible = false;
-                    btn_track_8.Visible = false;
-                    break;
-                case 2:
-                    btn_track_1.Visible = true;
-                    btn_track_2.Visible = true;
-                    btn_track_3.Visible = true;
-                    btn_track_4.Visible = false;
-                    btn_track_5.Visible = false;
-                    btn_track_6.Visible = false;
-                    btn_track_7.Visible = false;
-                    btn_track_8.Visible = false;
-                    break;
-                case 3:
-                    btn_track_1.Visible = true;
-                    btn_track_2.Visible = true;
-                    btn_track_3.Visible = true;
-                    btn_track_4.Visible = true;
-                    btn_track_5.Visible = false;
-                    btn_track_6.Visible = false;
-                    btn_track_7.Visible = false;
-                    btn_track_8.Visible = false;
-                    break;
-                case 4:
-                    btn_track_1.Visible = true;
-                    btn_track_2.Visible = true;
-                    btn_track_3.Visible = true;
-                    btn_track_4.Visible = true;
-                    btn_track_5.Visible = true;
-                    btn_track_6.Visible = false;
-                    btn_track_7.Visible = false;
-                    btn_track_8.Visible = false;
-                    break;
-                case 5:
-                    btn_track_1.Visible = true;
-                    btn_track_2.Visible = true;
-                    btn_track_3.Visible = true;
-                    btn_track_4.Visible = true;
-                    btn_track_5.Visible = true;
-                    btn_track_6.Visible = true;
-                    btn_track_7.Visible = false;
-                    btn_track_8.Visible = false;
-                    break;
-                case 6:
-                    btn_track_1.Visible = true;
-                    btn_track_2.Visible = true;
-                    btn_track_3.Visible = true;
-                    btn_track_4.Visible = true;
-                    btn_track_5.Visible = true;
-                    btn_track_6.Visible = true;
-                    btn_track_7.Visible = true;
-                    btn_track_8.Visible = false;
-                    break;
-                case 7:
-                    btn_track_1.Visible = true;
-                    btn_track_2.Visible = true;
-                    btn_track_3.Visible = true;
-                    btn_track_4.Visible = true;
-                    btn_track_5.Visible = true;
-                    btn_track_6.Visible = true;
-                    btn_track_7.Visible = true;
-                    btn_track_8.Visible = true;
-                    break;
-                default:
-                    btn_track_1.Visible = false;
-                    btn_track_2.Visible = false;
-                    btn_track_3.Visible = false;
-                    btn_track_4.Visible = false;
-                    btn_track_5.Visible = false;
-                    btn_track_6.Visible = false;
-                    btn_track_7.Visible = false;
-                    btn_track_8.Visible = false;
-                    break;
-            }
+
+            set_visibility_off_btn_long_track(list_btn_short);
+            set_visibility_on_btn_long_track(list_btn_short, comboBox1.SelectedIndex + 1);
         }
 
         private bool save_fileName_track(int i)
@@ -274,101 +206,34 @@ namespace test_copy_file
             return res;
         }
 
+        private void set_visibility_off_btn_long_track(List<Button> list_btn)
+        {
+            foreach (Button item in list_btn)
+            {
+                item.Visible = false;
+            }
+        }
+        private void set_visibility_on_btn_long_track(List<Button> list_btn, int number)
+        {
+            for(int i = 0; i<number; i++)
+            {
+                list_btn[i].Visible = true;
+            }
+        }
+
+        private void set_visibility_on_btn_long_track(List<Button> list_btn)
+        {
+            foreach (Button item in list_btn)
+            {
+                item.Visible = true;
+            }
+        }
+
+
         private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboBox2.SelectedIndex)
-            {
-                case 0:
-                    btn_track_long_1.Visible = true;
-                    btn_track_long_2.Visible = false;
-                    btn_track_long_3.Visible = false;
-                    btn_track_long_4.Visible = false;
-                    btn_track_long_5.Visible = false;
-                    btn_track_long_6.Visible = false;
-                    btn_track_long_7.Visible = false;
-                    btn_track_long_8.Visible = false;
-                    break;
-                case 1:
-                    btn_track_long_1.Visible = true;
-                    btn_track_long_2.Visible = true;
-                    btn_track_long_3.Visible = false;
-                    btn_track_long_4.Visible = false;
-                    btn_track_long_5.Visible = false;
-                    btn_track_long_6.Visible = false;
-                    btn_track_long_7.Visible = false;
-                    btn_track_long_8.Visible = false;
-                    break;
-                case 2:
-                    btn_track_long_1.Visible = true;
-                    btn_track_long_2.Visible = true;
-                    btn_track_long_3.Visible = true;
-                    btn_track_long_4.Visible = false;
-                    btn_track_long_5.Visible = false;
-                    btn_track_long_6.Visible = false;
-                    btn_track_long_7.Visible = false;
-                    btn_track_long_8.Visible = false;
-                    break;
-                case 3:
-                    btn_track_long_1.Visible = true;
-                    btn_track_long_2.Visible = true;
-                    btn_track_long_3.Visible = true;
-                    btn_track_long_4.Visible = true;
-                    btn_track_long_5.Visible = false;
-                    btn_track_long_6.Visible = false;
-                    btn_track_long_7.Visible = false;
-                    btn_track_long_8.Visible = false;
-                    break;
-                case 4:
-                    btn_track_long_1.Visible = true;
-                    btn_track_long_2.Visible = true;
-                    btn_track_long_3.Visible = true;
-                    btn_track_long_4.Visible = true;
-                    btn_track_long_5.Visible = true;
-                    btn_track_long_6.Visible = false;
-                    btn_track_long_7.Visible = false;
-                    btn_track_long_8.Visible = false;
-                    break;
-                case 5:
-                    btn_track_long_1.Visible = true;
-                    btn_track_long_2.Visible = true;
-                    btn_track_long_3.Visible = true;
-                    btn_track_long_4.Visible = true;
-                    btn_track_long_5.Visible = true;
-                    btn_track_long_6.Visible = true;
-                    btn_track_long_7.Visible = false;
-                    btn_track_long_8.Visible = false;
-                    break;
-                case 6:
-                    btn_track_long_1.Visible = true;
-                    btn_track_long_2.Visible = true;
-                    btn_track_long_3.Visible = true;
-                    btn_track_long_4.Visible = true;
-                    btn_track_long_5.Visible = true;
-                    btn_track_long_6.Visible = true;
-                    btn_track_long_7.Visible = true;
-                    btn_track_long_8.Visible = false;
-                    break;
-                case 7:
-                    btn_track_long_1.Visible = true;
-                    btn_track_long_2.Visible = true;
-                    btn_track_long_3.Visible = true;
-                    btn_track_long_4.Visible = true;
-                    btn_track_long_5.Visible = true;
-                    btn_track_long_6.Visible = true;
-                    btn_track_long_7.Visible = true;
-                    btn_track_long_8.Visible = true;
-                    break;
-                default:
-                    btn_track_long_1.Visible = false;
-                    btn_track_long_2.Visible = false;
-                    btn_track_long_3.Visible = false;
-                    btn_track_long_4.Visible = false;
-                    btn_track_long_5.Visible = false;
-                    btn_track_long_6.Visible = false;
-                    btn_track_long_7.Visible = false;
-                    btn_track_long_8.Visible = false;
-                    break;
-            }
+            set_visibility_off_btn_long_track(list_btn_long);
+            set_visibility_on_btn_long_track(list_btn_long, comboBox2.SelectedIndex+1);
         }
     }
 }
