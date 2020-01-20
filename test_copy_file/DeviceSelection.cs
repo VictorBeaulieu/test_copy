@@ -17,10 +17,10 @@ namespace test_copy_file
         public DeviceSelection()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             List<string> unitesLogiques = new List<string>();
             volumeNames = new List<string>();
-
-
+            
             foreach (DriveInfo f in DriveInfo.GetDrives())
             {
                 string tmp;
@@ -32,7 +32,8 @@ namespace test_copy_file
                     volumeNames.Add(f.Name);
                     unitesLogiques.Add(f.Name + tmp);
                 }
-                
+
+
             }
             
             
@@ -49,12 +50,13 @@ namespace test_copy_file
         {
             string[] vl = volumeNames.ToArray();
             Program.path_device = vl[listUniteLogic.SelectedIndex];
+            Program.run_check = true;
             this.Close();
         }
 
         private void Btn_exit_Click(object sender, EventArgs e)
         {
-            Program.quit_app = true;
+            
             this.Close();
         }
 
@@ -63,7 +65,7 @@ namespace test_copy_file
             
             string[] vl = volumeNames.ToArray();
             string path = vl[listUniteLogic.SelectedIndex].ToString();
-            string[] default_config = { "PFE_PRESSION_2", "5","8","8"};
+            string[] default_config = { "PFE_PRESSION_2", "0","0"};
             
             try
             {

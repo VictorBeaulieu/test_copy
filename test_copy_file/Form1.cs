@@ -25,6 +25,9 @@ namespace test_copy_file
         public Form_change_track()
         {
             InitializeComponent();
+
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+
             list_btn_short = new List<Button>();
             list_btn_long = new List<Button>();
 
@@ -50,8 +53,8 @@ namespace test_copy_file
             Console.WriteLine(Program.path_device);
             Console.WriteLine(Program.config[1]);
             Console.WriteLine(Program.config[2]);
-            comboBox1.SelectedIndex = Int16.Parse(Program.config[1]) - 1;
-            comboBox2.SelectedIndex = Int16.Parse(Program.config[2]) - 1;
+            comboBox1.SelectedIndex = Int16.Parse(Program.config[1]) ;
+            comboBox2.SelectedIndex = Int16.Parse(Program.config[2]) ;
 
         }
         
@@ -65,7 +68,7 @@ namespace test_copy_file
         {
 
             set_visibility_off_btn_long_track(list_btn_short);
-            set_visibility_on_btn_long_track(list_btn_short, comboBox1.SelectedIndex + 1);
+            set_visibility_on_btn_long_track(list_btn_short, comboBox1.SelectedIndex);
         }
 
         private bool save_fileName_track_short(int i)
@@ -315,7 +318,7 @@ namespace test_copy_file
         private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             set_visibility_off_btn_long_track(list_btn_long);
-            set_visibility_on_btn_long_track(list_btn_long, comboBox2.SelectedIndex+1);
+            set_visibility_on_btn_long_track(list_btn_long, comboBox2.SelectedIndex);
         }
 
         private void btn_track_long_1_Click(object sender, EventArgs e)

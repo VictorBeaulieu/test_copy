@@ -16,22 +16,20 @@ namespace test_copy_file
         /// </summary>
         public static string path_device;
         public static string[] config;
-        public static bool quit_app = false;
+        public static bool run_check = false;
         [STAThread]
 
         static void Main()
         {
-            
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new DeviceSelection());
-            if(!quit_app)
+            if(run_check)
             {
                 if (path_device != "C:\\")
                 {
 
-                    if(File.Exists(path_device+"info.txt"))
+                    if(File.Exists(path_device+"info.txt") && Directory.Exists(path_device + "\\tracks\\"))
                     {
                         try
                         {
@@ -45,10 +43,9 @@ namespace test_copy_file
                             throw;
                         }
                         if (config[0] == "PFE_PRESSION_2") Application.Run(new Form_change_track());
-                        else MessageBox.Show("wrong device selected");
+                        else MessageBox.Show("appareil non conforme");
                     }
-                else MessageBox.Show("wrong device selected");
-                //Application.Run(new Form_change_track());
+                    else MessageBox.Show("appareil non conforme");
 
                 }
             }

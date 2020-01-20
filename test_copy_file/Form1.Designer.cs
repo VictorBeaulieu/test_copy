@@ -53,7 +53,7 @@
             // btn_quitter
             // 
             this.btn_quitter.Location = new System.Drawing.Point(536, 414);
-            this.btn_quitter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_quitter.Margin = new System.Windows.Forms.Padding(2);
             this.btn_quitter.Name = "btn_quitter";
             this.btn_quitter.Size = new System.Drawing.Size(56, 19);
             this.btn_quitter.TabIndex = 0;
@@ -64,7 +64,7 @@
             // btn_track_short_1
             // 
             this.btn_track_short_1.Location = new System.Drawing.Point(9, 37);
-            this.btn_track_short_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_short_1.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_short_1.Name = "btn_track_short_1";
             this.btn_track_short_1.Size = new System.Drawing.Size(128, 65);
             this.btn_track_short_1.TabIndex = 5;
@@ -75,7 +75,7 @@
             // btn_track_short_2
             // 
             this.btn_track_short_2.Location = new System.Drawing.Point(141, 37);
-            this.btn_track_short_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_short_2.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_short_2.Name = "btn_track_short_2";
             this.btn_track_short_2.Size = new System.Drawing.Size(128, 65);
             this.btn_track_short_2.TabIndex = 6;
@@ -86,7 +86,7 @@
             // btn_track_short_3
             // 
             this.btn_track_short_3.Location = new System.Drawing.Point(9, 110);
-            this.btn_track_short_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_short_3.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_short_3.Name = "btn_track_short_3";
             this.btn_track_short_3.Size = new System.Drawing.Size(128, 65);
             this.btn_track_short_3.TabIndex = 7;
@@ -97,7 +97,7 @@
             // btn_track_short_4
             // 
             this.btn_track_short_4.Location = new System.Drawing.Point(141, 110);
-            this.btn_track_short_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_short_4.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_short_4.Name = "btn_track_short_4";
             this.btn_track_short_4.Size = new System.Drawing.Size(128, 65);
             this.btn_track_short_4.TabIndex = 8;
@@ -108,7 +108,7 @@
             // btn_track_short_5
             // 
             this.btn_track_short_5.Location = new System.Drawing.Point(9, 180);
-            this.btn_track_short_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_short_5.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_short_5.Name = "btn_track_short_5";
             this.btn_track_short_5.Size = new System.Drawing.Size(128, 65);
             this.btn_track_short_5.TabIndex = 9;
@@ -119,7 +119,7 @@
             // btn_track_short_6
             // 
             this.btn_track_short_6.Location = new System.Drawing.Point(141, 180);
-            this.btn_track_short_6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_short_6.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_short_6.Name = "btn_track_short_6";
             this.btn_track_short_6.Size = new System.Drawing.Size(128, 65);
             this.btn_track_short_6.TabIndex = 10;
@@ -130,7 +130,7 @@
             // btn_track_short_7
             // 
             this.btn_track_short_7.Location = new System.Drawing.Point(9, 249);
-            this.btn_track_short_7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_short_7.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_short_7.Name = "btn_track_short_7";
             this.btn_track_short_7.Size = new System.Drawing.Size(128, 65);
             this.btn_track_short_7.TabIndex = 11;
@@ -141,7 +141,7 @@
             // btn_track_short_8
             // 
             this.btn_track_short_8.Location = new System.Drawing.Point(141, 249);
-            this.btn_track_short_8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_short_8.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_short_8.Name = "btn_track_short_8";
             this.btn_track_short_8.Size = new System.Drawing.Size(128, 65);
             this.btn_track_short_8.TabIndex = 12;
@@ -154,6 +154,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -163,7 +164,7 @@
             "7",
             "8"});
             this.comboBox1.Location = new System.Drawing.Point(9, 10);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(54, 21);
             this.comboBox1.TabIndex = 13;
@@ -172,7 +173,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(10, 417);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 14;
@@ -183,7 +184,7 @@
             // btn_track_long_8
             // 
             this.btn_track_long_8.Location = new System.Drawing.Point(465, 249);
-            this.btn_track_long_8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_long_8.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_long_8.Name = "btn_track_long_8";
             this.btn_track_long_8.Size = new System.Drawing.Size(128, 65);
             this.btn_track_long_8.TabIndex = 22;
@@ -194,7 +195,7 @@
             // btn_track_long_7
             // 
             this.btn_track_long_7.Location = new System.Drawing.Point(333, 249);
-            this.btn_track_long_7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_long_7.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_long_7.Name = "btn_track_long_7";
             this.btn_track_long_7.Size = new System.Drawing.Size(128, 65);
             this.btn_track_long_7.TabIndex = 21;
@@ -205,7 +206,7 @@
             // btn_track_long_6
             // 
             this.btn_track_long_6.Location = new System.Drawing.Point(465, 180);
-            this.btn_track_long_6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_long_6.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_long_6.Name = "btn_track_long_6";
             this.btn_track_long_6.Size = new System.Drawing.Size(128, 65);
             this.btn_track_long_6.TabIndex = 20;
@@ -216,7 +217,7 @@
             // btn_track_long_5
             // 
             this.btn_track_long_5.Location = new System.Drawing.Point(333, 180);
-            this.btn_track_long_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_long_5.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_long_5.Name = "btn_track_long_5";
             this.btn_track_long_5.Size = new System.Drawing.Size(128, 65);
             this.btn_track_long_5.TabIndex = 19;
@@ -227,7 +228,7 @@
             // btn_track_long_4
             // 
             this.btn_track_long_4.Location = new System.Drawing.Point(465, 110);
-            this.btn_track_long_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_long_4.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_long_4.Name = "btn_track_long_4";
             this.btn_track_long_4.Size = new System.Drawing.Size(128, 65);
             this.btn_track_long_4.TabIndex = 18;
@@ -238,7 +239,7 @@
             // btn_track_long_3
             // 
             this.btn_track_long_3.Location = new System.Drawing.Point(333, 110);
-            this.btn_track_long_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_long_3.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_long_3.Name = "btn_track_long_3";
             this.btn_track_long_3.Size = new System.Drawing.Size(128, 65);
             this.btn_track_long_3.TabIndex = 17;
@@ -249,7 +250,7 @@
             // btn_track_long_2
             // 
             this.btn_track_long_2.Location = new System.Drawing.Point(465, 37);
-            this.btn_track_long_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_long_2.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_long_2.Name = "btn_track_long_2";
             this.btn_track_long_2.Size = new System.Drawing.Size(128, 65);
             this.btn_track_long_2.TabIndex = 16;
@@ -260,7 +261,7 @@
             // btn_track_long_1
             // 
             this.btn_track_long_1.Location = new System.Drawing.Point(333, 37);
-            this.btn_track_long_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_track_long_1.Margin = new System.Windows.Forms.Padding(2);
             this.btn_track_long_1.Name = "btn_track_long_1";
             this.btn_track_long_1.Size = new System.Drawing.Size(128, 65);
             this.btn_track_long_1.TabIndex = 15;
@@ -273,6 +274,7 @@
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -282,7 +284,7 @@
             "7",
             "8"});
             this.comboBox2.Location = new System.Drawing.Point(333, 12);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(54, 21);
             this.comboBox2.TabIndex = 23;
@@ -313,7 +315,7 @@
             this.Controls.Add(this.btn_track_short_2);
             this.Controls.Add(this.btn_track_short_1);
             this.Controls.Add(this.btn_quitter);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_change_track";
             this.Text = "Change track";
             this.ResumeLayout(false);
