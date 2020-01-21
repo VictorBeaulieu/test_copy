@@ -72,6 +72,7 @@ namespace test_copy_file
                 //File.Create(path + "info.txt");
                 if(File.Exists(path + "info.txt")) File.Delete(path + "info.txt");
                 File.AppendAllLines(path + "info.txt", default_config);
+                if (!Directory.Exists(path + "tracks")) Directory.CreateDirectory(path + "tracks") ;
                 
                 
             }
