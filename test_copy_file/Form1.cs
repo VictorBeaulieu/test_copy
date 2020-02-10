@@ -187,25 +187,30 @@ namespace test_copy_file
             copy_location = Program.path_device + "track\\";
             Console.WriteLine(copy_location + array_short_safeFileName_copy[0]);
 
-
-            if (check_path_short())
+            if (comboBox2.SelectedIndex != 0)
             {
-                for (int i = 0; i < comboBox1.SelectedIndex + 1; i++)
+                if (check_path_short())
                 {
-                    File.Copy(array_short_fileName_copy[i], copy_location + "track_short" + (i + 1).ToString() + ".wav", true);
+                    for (int i = 0; i < comboBox1.SelectedIndex + 1; i++)
+                    {
+                        File.Copy(array_short_fileName_copy[i], copy_location + "track_short" + (i + 1).ToString() + ".wav", true);
+                    }
+                    del_track_short();
                 }
-                del_track_short();
             }
-            else MessageBox.Show("you should register all path tracks");
-            if (check_path_long())
+            else MessageBox.Show("you shall register all path for short traks");
+            if(comboBox2.SelectedIndex !=0)
             {
-                for (int i = 0; i < comboBox2.SelectedIndex + 1; i++)
+                if (check_path_long())
                 {
-                    File.Copy(array_long_fileName_copy[i], copy_location + "track_long" + (i + 1).ToString() + ".wav", true);
+                    for (int i = 0; i < comboBox2.SelectedIndex + 1; i++)
+                    {
+                        File.Copy(array_long_fileName_copy[i], copy_location + "track_long" + (i + 1).ToString() + ".wav", true);
+                    }
+                    del_track_long();
                 }
-                del_track_long();
+                else MessageBox.Show("you shall register all path for long traks");
             }
-            else MessageBox.Show("you should register all path tracks");
 
             /*File.Delete(Program.path_device + "info.txt");
             File.AppendAllLines(Program.path_device + "info.txt", Program.config);*/
@@ -268,6 +273,7 @@ namespace test_copy_file
                 if (array_short_fileName_copy[i] == null)
                 {
                     res = false;
+                    
                 }
                 
             }
