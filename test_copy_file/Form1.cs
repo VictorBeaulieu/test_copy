@@ -184,16 +184,18 @@ namespace test_copy_file
         private void Button1_Click_1(object sender, EventArgs e)
         {
             
-            copy_location = Program.path_device + "track\\";
-            Console.WriteLine(copy_location + array_short_safeFileName_copy[0]);
+            copy_location = Program.path_device + "tracks\\";
+            
 
-            if (comboBox2.SelectedIndex != 0)
+            if (comboBox1.SelectedIndex != 0)
             {
                 if (check_path_short())
                 {
-                    for (int i = 0; i < comboBox1.SelectedIndex + 1; i++)
+                    Console.WriteLine("check path short validated");
+                    for (int i = 0; i < comboBox1.SelectedIndex; i++)
                     {
-                        File.Copy(array_short_fileName_copy[i], copy_location + "track_short" + (i + 1).ToString() + ".wav", true);
+                        File.Copy(array_short_fileName_copy[i], copy_location + "track_short_" + i.ToString() + ".wav", true);
+                        
                     }
                     del_track_short();
                 }
@@ -203,18 +205,18 @@ namespace test_copy_file
             {
                 if (check_path_long())
                 {
-                    for (int i = 0; i < comboBox2.SelectedIndex + 1; i++)
+                    for (int i = 0; i < comboBox2.SelectedIndex; i++)
                     {
-                        File.Copy(array_long_fileName_copy[i], copy_location + "track_long" + (i + 1).ToString() + ".wav", true);
+                        File.Copy(array_long_fileName_copy[i], copy_location + "track_long_" + i.ToString() + ".wav", true);
                     }
                     del_track_long();
                 }
                 else MessageBox.Show("you shall register all path for long traks");
             }
 
-            /*File.Delete(Program.path_device + "info.txt");
-            File.AppendAllLines(Program.path_device + "info.txt", Program.config);*/
-
+            File.Delete(Program.path_device + "info.txt");
+            File.AppendAllLines(Program.path_device + "info.txt", Program.config);
+            /*
             Console.WriteLine("//////copy///////");
             foreach (string item in Program.config)
             {
@@ -239,7 +241,7 @@ namespace test_copy_file
             foreach (string item in array_long_safeFileName_copy)
             {
                 Console.WriteLine(item);
-            }
+            }*/
             
         }
 
@@ -268,8 +270,9 @@ namespace test_copy_file
         {
             bool res = true;
             
-            for (int i = 0; i < comboBox1.SelectedIndex+1; i++)
+            for (int i = 0; i < comboBox1.SelectedIndex; i++)
             {
+                
                 if (array_short_fileName_copy[i] == null)
                 {
                     res = false;
@@ -285,7 +288,7 @@ namespace test_copy_file
         {
             bool res = true;
 
-            for (int i = 0; i < comboBox2.SelectedIndex + 1; i++)
+            for (int i = 0; i < comboBox2.SelectedIndex; i++)
             {
                 if (array_long_fileName_copy[i] == null)
                 {
@@ -319,14 +322,11 @@ namespace test_copy_file
                 item.Visible = true;
             }
         }
-
-
         private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             set_visibility_off_btn_long_track(list_btn_long);
             set_visibility_on_btn_long_track(list_btn_long, comboBox2.SelectedIndex);
         }
-
         private void btn_track_long_1_Click(object sender, EventArgs e)
         {
             if (save_fileName_track_long(0))
@@ -335,7 +335,6 @@ namespace test_copy_file
             }
             Program.config[2] = "1";
         }
-
         private void btn_track_long_2_Click(object sender, EventArgs e)
         {
             if (save_fileName_track_long(1))
@@ -344,7 +343,6 @@ namespace test_copy_file
             }
             Program.config[2] = "2";
         }
-
         private void btn_track_long_3_Click(object sender, EventArgs e)
         {
             if (save_fileName_track_long(2))
@@ -353,7 +351,6 @@ namespace test_copy_file
             }
             Program.config[2] = "3";
         }
-
         private void btn_track_long_4_Click(object sender, EventArgs e)
         {
             if (save_fileName_track_long(3))
@@ -362,7 +359,6 @@ namespace test_copy_file
             }
             Program.config[2] = "4";
         }
-
         private void btn_track_long_5_Click(object sender, EventArgs e)
         {
             if (save_fileName_track_long(4))
@@ -371,7 +367,6 @@ namespace test_copy_file
             }
             Program.config[2] = "5";
         }
-
         private void btn_track_long_6_Click(object sender, EventArgs e)
         {
             if (save_fileName_track_long(5))
@@ -380,7 +375,6 @@ namespace test_copy_file
             }
             Program.config[2] = "6";
         }
-
         private void btn_track_long_7_Click(object sender, EventArgs e)
         {
             if (save_fileName_track_long(6))
@@ -389,7 +383,6 @@ namespace test_copy_file
             }
             Program.config[2] = "7";
         }
-
         private void btn_track_long_8_Click(object sender, EventArgs e)
         {
             if (save_fileName_track_long(7))
